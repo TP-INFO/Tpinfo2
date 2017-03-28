@@ -10,6 +10,8 @@ namespace Tpinfo2
     {
         static void Main(string[] args)
         {
+            Encodage phrase = new Encodage();
+            phrase.Initial();
         }
     }
 }
