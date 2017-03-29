@@ -104,9 +104,7 @@ namespace Tpinfo2
         /// <returns></returns>
         private static char _encode (char caract)
         {
-            Console.WriteLine("De combien est le décalage associer a cette phrase ?");
-            int decalage = Convert.ToInt32(Console.ReadLine());
-
+           
             int asciiChar = Convert.ToInt32(caract) - 5;
             if (asciiChar < 97)
             {
