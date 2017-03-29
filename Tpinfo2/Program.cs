@@ -20,13 +20,12 @@ namespace Tpinfo2
 			int count = 0;
 
 
-			// boucle do/while pour basé sur le nbre de clés
+			// boucle do/while pour basé sur le nbre de clés à tester
 			do
 			{
 				//string phraseCode = "Wtfltdxtykgfmgftwtnftmxehdxttfmbinx";
 				string phraseCode = "Ssfksdwsxjgflgfsvsmfslwehdwssflaimw";
 				//string phraseCode = "kvmvyzvgzioznvhzovhjmkcjnzn";
-
 				//Console.WriteLine(phraseCode);
 
 				int i = 0;
@@ -51,11 +50,13 @@ namespace Tpinfo2
 					//Console.WriteLine($"Nouvelle lettre :{newLettre}");
 				}
 
+				Console.Write("Le message est: ");
+
 				foreach (var item in tabDecod)
 				{
 				Console.Write($"{item}");
 				}
-				Console.WriteLine($" // clé: +{count++}");
+				Console.WriteLine($" / (clé: +{count++})");
 
 				cle++;
 				
