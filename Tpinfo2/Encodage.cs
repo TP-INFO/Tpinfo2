@@ -31,6 +31,7 @@ namespace Tpinfo2
                     }
                     Console.WriteLine("");
                     Console.WriteLine(messageToEncode);
+                    Initial();
                     break;
 
                 case "e":
@@ -42,6 +43,7 @@ namespace Tpinfo2
                     }
                     Console.WriteLine("");
                     Console.WriteLine(messageToEncode);
+                    Initial();
                     break;
 
                 case "D":
@@ -53,6 +55,7 @@ namespace Tpinfo2
                     }
                     Console.WriteLine("");
                     Console.WriteLine(messageToDecode);
+                    Initial();
                     break;
 
                 case "d":
@@ -64,6 +67,7 @@ namespace Tpinfo2
                     }
                     Console.WriteLine("");
                     Console.WriteLine(messageToDecode);
+                    Initial();
                     break;
 
                 default:
@@ -82,6 +86,8 @@ namespace Tpinfo2
         /// <returns></returns>
         private static char _decode (char caract)
         {
+            //ToDo == Faire un "bruteforce" avec différents décalages
+
             int asciiChar = Convert.ToInt32(caract) + 5;
             if (asciiChar > 122)
             {
