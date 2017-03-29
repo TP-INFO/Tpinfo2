@@ -20,8 +20,8 @@ namespace Tpinfo2
 			// boucle do/while pour basé sur le nbre de clés
 			do
 			{
-				string phraseCode = "Wtfltdxtykgfmgftwtnftmxehdxttfmbinx";
-				//string phraseCode = "Ssfksdwsxjgflgfsvsmfslwehdwssflaimw";
+				//string phraseCode = "Wtfltdxtykgfmgftwtnftmxehdxttfmbinx";
+				string phraseCode = "Ssfksdwsxjgflgfsvsmfslwehdwssflaimw";
 				//string phraseCode = "kvmvyzvgzioznvhzovhjmkcjnzn";
 
 				//Console.WriteLine(phraseCode);
