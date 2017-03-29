@@ -86,14 +86,13 @@ namespace Tpinfo2
         /// <returns></returns>
         private static char _decode (char caract)
         {
-            //ToDo == Faire un "bruteforce" avec différents décalages
-
-            int asciiChar = Convert.ToInt32(caract) + 5;
+            int asciiChar = Convert.ToInt32(caract) + 5; //8 pour phrase n°2
             if (asciiChar > 122)
             {
                 asciiChar -= 26;
             }
             caract = Convert.ToChar(asciiChar);
+
             return caract;
         }
 
@@ -105,12 +104,16 @@ namespace Tpinfo2
         /// <returns></returns>
         private static char _encode (char caract)
         {
+            Console.WriteLine("De combien est le décalage associer a cette phrase ?");
+            int decalage = Convert.ToInt32(Console.ReadLine());
+
             int asciiChar = Convert.ToInt32(caract) - 5;
             if (asciiChar < 97)
             {
                 asciiChar += 26;
             }
             caract = Convert.ToChar(asciiChar);
+
             return caract;
         }
 
