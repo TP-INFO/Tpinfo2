@@ -10,6 +10,9 @@ namespace Tpinfo2
 	{
 		static void Main(string[] args)
 		{
+
+			/// POUR CREER METHODE DECHIFFRER
+			/// 
 			// initialisation de la valeur clé de chiffrement
 			int cle = 0;
 
