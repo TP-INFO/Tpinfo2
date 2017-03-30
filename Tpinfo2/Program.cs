@@ -10,6 +10,20 @@ namespace Tpinfo2
 	{
 		static void Main(string[] args)
 		{
+			foreach (string arg in args)
+			{
+				switch (arg)
+				{
+					case "message" :
+						Console.WriteLine("Appel méthode chiffrement");
+						break;
+					case "message decode":
+						Console.WriteLine("Appel méthode chiffrement");
+						break;
+				}
+			}
+
+		 
 
 			/// POUR CREER METHODE DECHIFFRER
 			/// 
