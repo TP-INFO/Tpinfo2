@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B31A034C-BADD-4309-AB9C-34C7C27D2520}</ProjectGuid>
+    <ProjectGuid>{716AAA94-58A0-47E1-97CC-D1C4D478C3A9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tpinfo2</RootNamespace>
-    <AssemblyName>Tpinfo2</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>_2017_02_22_TP_Encoder_Decoder</RootNamespace>
+    <AssemblyName>2017_02_22_TP_Encoder_Decoder</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
