@@ -68,7 +68,7 @@ namespace Tpinfo2
 
 
         /// <summary>
-        /// Méthode permettant de trouver une phrase codée par décalage des lettres de l'alaphabet.
+        /// Méthode permettant    de trouver une phrase codée par décalage des lettres de l'alaphabet.
         /// Affiche 26 propositions de décodage et sa clé de codage correspondant au lettres de l'alphabet.
         /// </summary>
         public static void AfficherMesDecode()
