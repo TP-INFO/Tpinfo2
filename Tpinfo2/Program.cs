@@ -19,11 +19,11 @@ namespace Tpinfo2
 					switch (arg)
 					{
 						case "encode":
-						Dechiffrer();
+						Chiffrer();
 							break;
 
 						case "decode":
-							Chiffrer();
+							Dechiffrer();
 							break;
 						default:
 							break;
