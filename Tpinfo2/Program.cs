@@ -11,7 +11,7 @@ namespace Tpinfo2
 		
 		static void Main(string[] args)
 		{
-			/// évaluation des arguments
+			/// évaluation des arguments avec appel de méthodes
 			foreach (string arg in args)
 			{
 				if (args.Length >=1)
