@@ -55,7 +55,8 @@ namespace message {
 
 
     /// <summary>
-    /// Encode a message using shifting technique
+    /// Encode a message using shifting technique. 
+    /// for now the encoding supports letters only 
     /// </summary>
     /// <param name="userInput"></param>
     /// <param name="shiftAmount"></param>
@@ -63,14 +64,52 @@ namespace message {
     private static string Encode(string userInput, int shiftAmount) {
       char[] charMessage = userInput.ToCharArray();
       for(int i = 0; i < charMessage.Length; ++i) {
-        Char.ToLower(charMessage[i]);  // TODO: add support to upper case input
-        charMessage[i] = (char)((charMessage[i] + shiftAmount - 'a') % 26 + 'a');
+        char c = charMessage[i];
+        if(c == ' ') {
+          // just pass
+          charMessage[i] = '?';  // TODO : we can radomize this 
+        }
+        else if(c == Char.ToLower(c)) {// c is a lower case 
+          charMessage[i] = (char)((c + shiftAmount - 'a') % 26 + 'a');
+        }
+        else {
+          charMessage[i] = (char)((c + shiftAmount - 'A') % 26 + 'A');
+        }
       }
       return new string(charMessage); 
     }
 
     internal static void DecodeDialog() {
-      throw new NotImplementedException();
+
+      string userInput = null;
+      try {
+        Console.WriteLine("Please enter the message to be decoded: ");
+        userInput = Console.ReadLine();
+        if(!IsAlphaOnly(userInput)) {
+          throw new FormatException("The encoder supports messages containing letters only!");
+        }
+        // try all the shift and prints the results to user 
+        // the user will recongnise its message
+        Console.WriteLine("Possibilities");
+        for(int i = 0; i < 25; i++) {
+          
+          Console.WriteLine(String.Format("{0,5}: {1}", i + 1, Encode(userInput, i)));
+        }
+
+
+
+      }
+      catch(FormatException fe) {
+        Console.WriteLine(fe.Message);
+      }
+      catch(Exception) {
+        Console.WriteLine("Unknown error occured while reading the message");
+      }
+
+
+
+
+
     }
 
     /// <summary>
@@ -80,7 +119,7 @@ namespace message {
     /// <returns></returns>
     private static bool IsAlphaOnly(string str) {
       for(int i = 0; i < str.Length; i++) {
-        if(!Char.IsLetter(str[i]))
+        if(!Char.IsLetter(str[i]) && str[i] != ' ')
           return false;
       }
       return true; 
