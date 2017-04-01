@@ -20,14 +20,15 @@ namespace message {
       int shiftAmount = 5;  //
       string userInput = null;
       bool validInput = false;
-      Console.WriteLine("Please enter a message to be encoded: ");
       try {
         while(!validInput) {
+
+          Console.WriteLine("Please enter a message to be encoded: ");
           userInput = Console.ReadLine();
 
-          // check if string contains only letter
+          // check if string contains letter only 
           if(IsAlphaOnly(userInput)) {
-            string encodedMessage = EncodeDialog(userInput, shiftAmount);
+            string encodedMessage = Encode(userInput, shiftAmount);
             Console.WriteLine("The encoded message: ");
             Console.WriteLine(encodedMessage);
             // TODO : Add possiblity for multiple message decoding session 
@@ -36,26 +37,15 @@ namespace message {
           else {// not valid input 
             Console.WriteLine("input not valid. Try again. Enter 0 to quit ");
             userInput = Console.ReadLine();
-            if(userInput != "0")
+            if(userInput == "0")
               validInput = true;  
-
-            
-
           }
-
-
-
-
 
         }
 
-
-
-
       }
-      catch(Exception) {
-
-        throw;
+      catch(Exception e) {
+        Console.WriteLine("Unknown input");
       }
 
 
@@ -70,11 +60,11 @@ namespace message {
     /// <param name="userInput"></param>
     /// <param name="shiftAmount"></param>
     /// <returns></returns>
-    private static string EncodeDialog(string userInput, int shiftAmount) {
+    private static string Encode(string userInput, int shiftAmount) {
       char[] charMessage = userInput.ToCharArray();
-      for(int i = 0; i < charMessage.Length; i++) {
+      for(int i = 0; i < charMessage.Length; ++i) {
         Char.ToLower(charMessage[i]);  // TODO: add support to upper case input
-        charMessage[i] = (char)((charMessage[i] + shiftAmount) % 26 + 'a');
+        charMessage[i] = (char)((charMessage[i] + shiftAmount - 'a') % 26 + 'a');
       }
       return new string(charMessage); 
     }
