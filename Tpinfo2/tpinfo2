@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication999
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string phrase = "lzqntdm";
+
+            char[] tabLettreDecoD = new char[phrase.Length];
+
+
+            for (int i = 0; i < phrase.Length; i++)
+            {
+                Console.WriteLine(phrase[i]);
+            int carChiffre = phrase[i];
+            int newCarChiffre = carChiffre + 1;
+                if (newCarChiffre>122)
+                {
+                    newCarChiffre -= 26;
+                }
+                Console.WriteLine(carChiffre);
+                Console.WriteLine($" / {newCarChiffre}");
+                char newLettre = Convert.ToChar(newCarChiffre);
+                Console.WriteLine($" - {newLettre}");
+
+                tabLettreDecoD[i] = newLettre;
+            }
+
+            Console.WriteLine(tabLettreDecoD);
+        }
+    }
+}
